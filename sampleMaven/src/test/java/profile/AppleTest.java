@@ -5,11 +5,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class AppleTest {
 	@Test(groups = "smoke")
 	public void toLaunchApple() {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver=WebDriverManager.chromedriver().create();
 		driver.get("https://www.apple.com/");
 	}
 }
