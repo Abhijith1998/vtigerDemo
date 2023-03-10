@@ -37,6 +37,40 @@
 	</dependencies>
 	<profiles>
 		<profile>
+			<id>System</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.0.0-M9</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>System.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>functionality</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.0.0-M9</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>functionality.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
 			<id>smoke</id>
 			<build>
 				<plugins>
@@ -54,7 +88,7 @@
 			</build>
 		</profile>
 		<profile>
-			<id>funtionality</id>
+			<id>integration</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -63,7 +97,7 @@
 						<version>3.0.0-M9</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>funtionality.xml</suiteXmlFile>
+								<suiteXmlFile>integration.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
